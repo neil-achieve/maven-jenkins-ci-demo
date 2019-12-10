@@ -29,7 +29,7 @@
 	<Flows>
 		<Flow name="Get Latest Exchange Rates">
             		<Condition>
-				(request.verb = "GET") and 
+				(request.verb = "GET") and
 				(proxy.pathsuffix MatchesPath "/latest")
 			</Condition>
             		<Request>
@@ -40,7 +40,7 @@
         	</Flow>
         	<Flow name="Get Exchange Rates by Date">
             		<Condition>
-				(request.verb = "GET") and 
+				(request.verb = "GET") and
 				(proxy.pathsuffix ~~  "/\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])")
 			</Condition>
             		<Request>
@@ -56,7 +56,7 @@
 	</PostFlow>
 
 	<HTTPTargetConnection>
-		<URL>https://frankfurter.app</URL>
+		<URL>https://apigee.com</URL>
 	</HTTPTargetConnection>
 
 </TargetEndpoint>
